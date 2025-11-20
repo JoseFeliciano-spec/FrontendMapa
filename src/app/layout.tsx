@@ -4,6 +4,8 @@ import { Toaster } from "react-hot-toast";
 import { Provider } from "@/components/ui/provider";
 import { QueryProvider } from "@/components/provider/QueryProvider";
 import "./globals.css";
+import { AirportProvider } from "@/components/provider/AirportContext";
+import { FloatingNav } from "@/components/layout/FloatingButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,15 +34,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <QueryProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <Provider>
-            {children}
-            {modal}
-            <Toaster position="top-right" reverseOrder={false} />
-          </Provider>
-        </body>
+        <AirportProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <FloatingNav />
+            <Provider>
+              {children}
+              {modal}
+              <Toaster position="top-right" reverseOrder={false} />
+            </Provider>
+          </body>
+        </AirportProvider>
       </QueryProvider>
     </html>
   );
