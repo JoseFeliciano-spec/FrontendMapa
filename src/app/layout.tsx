@@ -18,18 +18,15 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
 export const metadata: Metadata = {
-  title: "MapaApp | Proyecto realizado por Jose Feliciano",
-  description: "MapaApp creado con Next.js",
+  title: "SkyConnect Explorer | Proyecto realizado por Jose Feliciano",
+  description: "Explora aeropuertos del mundo",
 };
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -41,7 +38,6 @@ export default function RootLayout({
             <FloatingNav />
             <Provider>
               {children}
-              {modal}
               <Toaster position="top-right" reverseOrder={false} />
             </Provider>
           </body>
