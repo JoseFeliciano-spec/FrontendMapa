@@ -245,6 +245,3 @@ Desarrollador Full Stack — React / Next.js / Backend con FastAPI – Cloud Run
 * Comunidad Next.js
 * React Leaflet
 * Vercel
-
-
-Solo dime “sí” y te los dejo listos.
